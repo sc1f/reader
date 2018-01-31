@@ -7,6 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title') | rdr</title>
     <link rel="stylesheet" href="/css/custom_foundation.css">
+    <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/foundation_icons/foundation-icons.css">
     @yield('meta')
@@ -23,7 +24,7 @@
         @yield('top-bar-right')
     </div>
 </div>
-<div class="main grid-container fluid" id="app">
+<div class="main grid-container fluid">
     @yield('content')
 </div>
 <div class="grid-container full">
@@ -35,6 +36,10 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/foundation.min.js"></script>
+<!-- i don't know how or why this works but it works so please don't delete it -->
+<script>
+    window.Laravel = {!! json_encode(['csrfToken' => csrf_token()]) !!};
+</script>
 <script src="/js/app.js"></script>
 </body>
 </html>

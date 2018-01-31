@@ -19,5 +19,8 @@
     </div>
 @endsection
 @section('content')
-
+    <!-- vue.js app entry point -->
+    <div id="app">
+        <dashboard></dashboard>
+    </div>
 @endsection

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -27,7 +26,6 @@ class HomeController extends Controller
     public function getDashboard(Request $request) {
         if (!Auth::check()) {
             abort(403, "Unauthorized.");
-
         }
 
         $data = [

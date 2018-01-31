@@ -19,7 +19,7 @@
     <div class="grid-container">
         <div class="grid-x main">
             <div class="auto cell flex-container align-center-middle">
-                <h1>Have you considered doing your readings?</h1>
+                <h1>Welcome to rdr.</h1>
             </div>
         </div>
     </div>

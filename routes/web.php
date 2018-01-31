@@ -13,10 +13,6 @@
 
 Route::get('/', 'Controller@getHomepage');
 
-/*Route::group(['prefix'=>'api/course', function () {
-    Route::get('{module_id}/card/{card_id}/response/{canvas_user_id}', 'ResponseController@getResponse');
-});*/
-
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@getDashboard')->name('dashboard');
