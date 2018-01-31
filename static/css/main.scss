@@ -1,0 +1,64 @@
+// colors
+
+$theme-primary: #F27155;
+$theme-secondary: #529CA7;
+$theme-tertiary: #b29c84;
+$theme-lightgray: #d0d0d0;
+$theme-gray: #a0a0a0;
+$theme-darkgray: #303337;
+
+// typography
+$body-font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/*
+@font-face {
+  font-family: "Avenir Custom";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/static/fonts/Avenir LT 45 Book.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Avenir Custom";
+  font-weight: normal;
+  font-style: italic;
+  src: url("/static/fonts/Avenir LT 45 Book Oblique.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Avenir Custom";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/static/fonts/Avenir LT 65 Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Avenir Custom";
+  font-weight: bold;
+  font-style: italic;
+  src: url("/static/fonts/Avenir LT 65 Medium Oblique.ttf") format("ttf");
+}
+*/
+
+// mixins
+
+@mixin box_shadow ($level) {
+
+  @if $level == 1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  } @else if $level == 2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  } @else if $level == 3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  } @else if $level == 4 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  } @else if $level == 5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+
+}
+
+// import your files here
+@import 'foundation_sass/color_settings';
+@import 'imports/globals';
+@import 'imports/components';

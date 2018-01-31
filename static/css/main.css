@@ -1,0 +1,125 @@
+/*
+@font-face {
+  font-family: "Avenir Custom";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/static/fonts/Avenir LT 45 Book.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Avenir Custom";
+  font-weight: normal;
+  font-style: italic;
+  src: url("/static/fonts/Avenir LT 45 Book Oblique.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Avenir Custom";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/static/fonts/Avenir LT 65 Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Avenir Custom";
+  font-weight: bold;
+  font-style: italic;
+  src: url("/static/fonts/Avenir LT 65 Medium Oblique.ttf") format("ttf");
+}
+*/
+body {
+  overflow-x: hidden; }
+
+a.link.link--small {
+  font-size: .9rem; }
+
+.top-bar {
+  background: none;
+  border-bottom: 1px solid #d0d0d0;
+  padding: 1em; }
+
+div.top-bar__title {
+  background: #F27155;
+  color: #fff;
+  height: 2em;
+  width: 2em;
+  padding: .25rem;
+  font-weight: bold; }
+
+.has-tip.has-tip--no-underline {
+  border-bottom: none;
+  cursor: pointer; }
+
+.footer {
+  border-top: 1px solid #d0d0d0;
+  padding: 1em; }
+
+.footer__content--text {
+  font-size: .8rem; }
+
+.main {
+  padding: 1em;
+  height: 85vh; }
+  .main .main__cell {
+    height: 100%; }
+  .main .main__content {
+    font-weight: bold; }
+  .main .main__content--subhead {
+    font-weight: normal; }
+
+div.grid-x.index {
+  height: 100%; }
+
+.courses {
+  height: 100%; }
+
+.courses__header {
+  margin-bottom: 1em; }
+
+div.courses__container {
+  height: 80%;
+  overflow: scroll;
+  margin-bottom: auto; }
+
+div.course {
+  border: 1px solid #d0d0d0;
+  padding: .5rem;
+  margin-bottom: .5em; }
+  div.course:hover {
+    border: 1px solid #a0a0a0;
+    cursor: pointer; }
+
+.course__details span {
+  font-size: .8rem; }
+
+i.course__icon {
+  color: #a0a0a0;
+  margin-right: .5em; }
+
+.course__text.course__text--name {
+  font-weight: bold; }
+
+.course__text.course__text--meta {
+  font-size: .75rem; }
+
+.course__form--new_course {
+  background: #F27155;
+  color: #fff;
+  margin-top: auto;
+  padding: .5em;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s; }
+  .course__form--new_course i {
+    margin-right: .5em; }
+  .course__form--new_course:hover {
+    background: #ee4926;
+    cursor: pointer; }
+
+.content {
+  margin: 0 0 0 1em;
+  padding: 1em; }
+
+/*# sourceMappingURL=../../../../../../static/css/main.css.map */
