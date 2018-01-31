@@ -1,4 +1,12 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,600);/*
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,600);.bold {
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/*
 @font-face {
   font-family: "Avenir Custom";
   font-weight: normal;
@@ -42,6 +50,10 @@ a.link.link--small {
   padding: 1em;
 }
 
+.top-bar-right {
+  width: 20%;
+}
+
 div.top-bar__title {
   background: #F27155;
   color: #fff;
@@ -56,6 +68,15 @@ div.top-bar__title {
   cursor: pointer;
 }
 
+ul.menu {
+  border: none;
+}
+
+.dropdown-menu__element {
+  border: 1px solid #d0d0d0;
+  background: #fff;
+}
+
 .footer {
   border-top: 1px solid #d0d0d0;
   padding: 1em;
@@ -65,9 +86,131 @@ div.top-bar__title {
   font-size: .8rem;
 }
 
+.margin-top-0 {
+  margin-top: 0em !important;
+}
+
+.padding-top-0 {
+  padding-top: 0em !important;
+}
+
+.margin-bottom-0 {
+  margin-bottom: 0em !important;
+}
+
+.padding-bottom-0 {
+  padding-bottom: 0em !important;
+}
+
+.margin-left-0 {
+  margin-left: 0em !important;
+}
+
+.padding-left-0 {
+  padding-left: 0em !important;
+}
+
+.margin-right-0 {
+  margin-right: 0em !important;
+}
+
+.padding-right-0 {
+  padding-right: 0em !important;
+}
+
+.margin-top-1 {
+  margin-top: 1em !important;
+}
+
+.padding-top-1 {
+  padding-top: 1em !important;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 1em !important;
+}
+
+.padding-bottom-1 {
+  padding-bottom: 1em !important;
+}
+
+.margin-left-1 {
+  margin-left: 1em !important;
+}
+
+.padding-left-1 {
+  padding-left: 1em !important;
+}
+
+.margin-right-1 {
+  margin-right: 1em !important;
+}
+
+.padding-right-1 {
+  padding-right: 1em !important;
+}
+
+.margin-top-2 {
+  margin-top: 2em !important;
+}
+
+.padding-top-2 {
+  padding-top: 2em !important;
+}
+
+.margin-bottom-2 {
+  margin-bottom: 2em !important;
+}
+
+.padding-bottom-2 {
+  padding-bottom: 2em !important;
+}
+
+.margin-left-2 {
+  margin-left: 2em !important;
+}
+
+.padding-left-2 {
+  padding-left: 2em !important;
+}
+
+.margin-right-2 {
+  margin-right: 2em !important;
+}
+
+.padding-right-2 {
+  padding-right: 2em !important;
+}
+
+.margin-0 {
+  margin: 0 !important;
+}
+
+.padding-0 {
+  padding: 0 !important;
+}
+
+.grid-y__center {
+  padding: 1em 20%;
+}
+
+@media (max-width: 640px) {
+  .grid-y__center {
+    padding: 1em;
+  }
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+.background-none {
+  background: none !important;
+}
+
 .main {
   padding: 1em;
-  height: 85vh;
+  height: 80vh;
 }
 
 .main .main__cell {

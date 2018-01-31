@@ -7,9 +7,21 @@ $theme-lightgray: #d0d0d0;
 $theme-gray: #a0a0a0;
 $theme-darkgray: #303337;
 
+// layout helpers
+
 // typography
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,600");
+
 $body-font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// typographic helpers
+.bold {
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+}
 
 /*
 @font-face {
@@ -62,4 +74,5 @@ $body-font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 // import your files here
 @import 'foundation_sass/color_settings';
 @import 'imports/globals';
+@import 'imports/helpers';
 @import 'imports/components';

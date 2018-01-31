@@ -1,0 +1,41 @@
+$spaces: (0, 1, 2); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaces {
+  @each $side in $sides {
+    .margin-#{$side}-#{$space} {
+      margin-#{$side}: #{$space}em !important;
+    }
+
+    .padding-#{$side}-#{$space} {
+      padding-#{$side}: #{$space}em !important;
+    }
+  }
+}
+
+.margin-0 {
+  margin: 0 !important;
+}
+
+.padding-0 {
+  padding: 0 !important;
+}
+
+// grid helpers
+.grid-y__center {
+  padding: 1em 20%;
+
+  @media (max-width: 640px) {
+    padding: 1em;
+  }
+}
+
+// typographic helpers
+.small {
+  font-size: 0.875rem;
+}
+
+// color helpers
+.background-none {
+  background: none !important;
+}

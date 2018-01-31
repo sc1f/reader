@@ -11,19 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('/login/', function () {
-    return view('login');
-});
-
-Route::get('/logout', function () {
-    return view('logout');
-});
-
+Route::get('/', 'Controller@getHomepage');
 
 /*Route::group(['prefix'=>'api/course', function () {
     Route::get('{module_id}/card/{card_id}/response/{canvas_user_id}', 'ResponseController@getResponse');
 });*/
+
+Auth::routes();
+
+Route::get('/dashboard', 'HomeController@getDashboard')->name('dashboard');
