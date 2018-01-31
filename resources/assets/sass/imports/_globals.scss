@@ -1,0 +1,38 @@
+body {
+  overflow-x: hidden;
+}
+
+a.link {
+  &.link--small {
+    font-size: .9rem;
+  }
+}
+
+.top-bar {
+  background: none;
+  border-bottom: 1px solid $theme-lightgray;
+  padding: 1em;
+}
+
+div.top-bar__title {
+  background: $theme-primary;
+  color: #fff;
+  height: 2em;
+  width: 2em;
+  padding: .25rem;
+  font-weight: bold;
+}
+
+.has-tip.has-tip--no-underline {
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.footer {
+  border-top: 1px solid $theme-lightgray;
+  padding: 1em;
+}
+
+.footer__content--text {
+  font-size: .8rem;
+}

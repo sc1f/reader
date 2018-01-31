@@ -12,5 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/login/', function () {
+    return view('login');
+});
+
+Route::get('/logout', function () {
+    return view('logout');
+});
+
+
+/*Route::group(['prefix'=>'api/course', function () {
+    Route::get('{module_id}/card/{card_id}/response/{canvas_user_id}', 'ResponseController@getResponse');
+});*/

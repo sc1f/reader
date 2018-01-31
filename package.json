@@ -11,7 +11,13 @@
     },
     "devDependencies": {
         "axios": "^0.17",
+        "babel-eslint": "^8.2.1",
         "cross-env": "^5.1",
+        "eslint": "^4.16.0",
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-plugin-import": "^2.8.0",
+        "eslint-plugin-jsx-a11y": "^2.2.3",
+        "eslint-plugin-react": "^7.6.1",
         "jquery": "^3.2",
         "laravel-mix": "^2.0",
         "lodash": "^4.17.4",
