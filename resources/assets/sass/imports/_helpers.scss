@@ -49,3 +49,7 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 .background-none {
   background: none !important;
 }
+
+.color-theme-primary {
+  color: $theme-primary;
+}

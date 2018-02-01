@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "Helvetica Neue Custom";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/fonts/HelveticaNeue.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Neue Custom";
+  font-weight: normal;
+  font-style: italic;
+  src: url("/fonts/HelveticaNeueItalic.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Neue Custom";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/fonts/HelveticaNeueBold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Neue Custom";
+  font-weight: bold;
+  font-style: italic;
+  src: url("/fonts/HelveticaNeueBoldItalic.ttf") format("ttf");
+}
+
+
 @import 'imports/settings';
 @import 'foundation_sass/foundation';
 

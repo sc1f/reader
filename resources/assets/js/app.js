@@ -46,7 +46,9 @@ const courseSidebar = {
             return new Promise((resolve, reject) => {
                 let user_id = rootState.dashboard.user.id,
                     url = '/api/users/' + user_id + '/courses/';
-                axios.get(url)
+                axios.get(url, {
+                    // set headers
+                })
                     .then((response) => {
                         commit('setCourses', response.data.courses);
                         commit('setCoursesLoaded');
@@ -80,7 +82,9 @@ const courseContent = {
             return new Promise((resolve, reject) => {
                 let user_id = rootState.dashboard.user.id,
                     url = '/api/users/' + user_id + '/courses/' + course_id;
-                axios.get(url)
+                axios.get(url, {
+                    // set headers
+                })
                     .then((response) => {
                         commit('setCurrentCourse', response.data.course);
                         commit('setCurrentCourseLoaded');

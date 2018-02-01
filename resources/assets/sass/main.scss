@@ -10,9 +10,7 @@ $theme-darkgray: #303337;
 // layout helpers
 
 // typography
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,600");
-
-$body-font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$body-font-family: 'Helvetica Neue Custom', Helvetica, Arial, sans-serif;
 
 // typographic helpers
 .bold {
@@ -22,37 +20,6 @@ $body-font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 .italic {
   font-style: italic;
 }
-
-/*
-@font-face {
-  font-family: "Avenir Custom";
-  font-weight: normal;
-  font-style: normal;
-  src: url("/static/fonts/Avenir LT 45 Book.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Avenir Custom";
-  font-weight: normal;
-  font-style: italic;
-  src: url("/static/fonts/Avenir LT 45 Book Oblique.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Avenir Custom";
-  font-weight: bold;
-  font-style: normal;
-  src: url("/static/fonts/Avenir LT 65 Medium.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Avenir Custom";
-  font-weight: bold;
-  font-style: italic;
-  src: url("/static/fonts/Avenir LT 65 Medium Oblique.ttf") format("ttf");
-}
-*/
-
 // mixins
 
 @mixin box_shadow ($level) {

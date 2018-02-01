@@ -1,5 +1,33 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: "Helvetica Neue Custom";
+  font-weight: normal;
+  font-style: normal;
+  src: url("/fonts/HelveticaNeue.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Neue Custom";
+  font-weight: normal;
+  font-style: italic;
+  src: url("/fonts/HelveticaNeueItalic.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Neue Custom";
+  font-weight: bold;
+  font-style: normal;
+  src: url("/fonts/HelveticaNeueBold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Neue Custom";
+  font-weight: bold;
+  font-style: italic;
+  src: url("/fonts/HelveticaNeueBoldItalic.ttf") format("ttf");
+}
+
 /**
  * Foundation for Sites by ZURB
  * Version 6.4.4-rc1
@@ -565,7 +593,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fefefe;
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica Neue Custom," Helvetica, Roboto, Arial, sans-serif !important;
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
@@ -3356,7 +3384,7 @@ h5,
 .h5,
 h6,
 .h6 {
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica Neue Custom," Helvetica, Roboto, Arial, sans-serif !important;
   font-style: normal;
   font-weight: normal;
   color: inherit;

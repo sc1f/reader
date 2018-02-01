@@ -68,7 +68,7 @@ $body-font-color: $black;
 
 // font-family settings
 $font-family-monospace: 'Input Mono Narrow', 'Roboto Mono', monospace;
-$body-font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$body-font-family: 'Helvetica Neue', 'Helvetica Neue Custom,' Helvetica, Roboto, Arial, sans-serif !important;
 $header-font-family: $body-font-family;
 $body-antialiased: true;
 $global-margin: 1rem;

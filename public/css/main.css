@@ -1,40 +1,10 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,600);.bold {
+.bold {
   font-weight: 600;
 }
 
 .italic {
   font-style: italic;
 }
-
-/*
-@font-face {
-  font-family: "Avenir Custom";
-  font-weight: normal;
-  font-style: normal;
-  src: url("/static/fonts/Avenir LT 45 Book.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Avenir Custom";
-  font-weight: normal;
-  font-style: italic;
-  src: url("/static/fonts/Avenir LT 45 Book Oblique.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Avenir Custom";
-  font-weight: bold;
-  font-style: normal;
-  src: url("/static/fonts/Avenir LT 65 Medium.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Avenir Custom";
-  font-weight: bold;
-  font-style: italic;
-  src: url("/static/fonts/Avenir LT 65 Medium Oblique.ttf") format("ttf");
-}
-*/
 
 body {
   overflow-x: hidden;
@@ -216,6 +186,10 @@ ul.menu {
   background: none !important;
 }
 
+.color-theme-primary {
+  color: #F27155;
+}
+
 .main {
   padding: 1em;
   height: 80vh;
@@ -249,10 +223,6 @@ div.grid-x.index {
   height: 100%;
 }
 
-.courses__header {
-  margin-bottom: 1em;
-}
-
 div.courses__container {
   height: 80%;
   overflow: scroll;
@@ -262,7 +232,7 @@ div.courses__container {
 div.course {
   border: 1px solid #d0d0d0;
   padding: .5rem;
-  margin-bottom: .5em;
+  margin-bottom: 1em;
 }
 
 div.course:hover {
@@ -306,8 +276,12 @@ i.course__icon {
 }
 
 .content {
-  border: 1px solid #d0d0d0;
   margin-left: 1em;
-  padding: .5em;
+}
+
+.content__meta,
+.content__deadlines {
+  border: 1px solid #d0d0d0;
+  padding: 1em;
 }
 

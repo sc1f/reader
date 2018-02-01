@@ -2,7 +2,7 @@
     <div class="courses__sidebar">
         <div>
             <div class="grid-x align-middle courses__header">
-                <span>Your Courses</span>
+                <h5>Your Courses</h5>
             </div>
             <div class="courses__container courses__container--none cell auto" v-if="!$store.getters['courseSidebar/getCoursesLoaded'] && !$store.getters['courseSidebar/getCourses']">
                 <p>You have no courses to track.</p>

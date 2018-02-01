@@ -5,10 +5,10 @@
 @section('top-bar-right')
 @guest
     <div class="grid-x">
-        <div class="cell small-6 align-middle align-right flex-container">
+        <div class="cell large-6 medium-6 small-12 align-middle align-right flex-container">
             <a href="{{ route('login') }}">Login</a>
         </div>
-        <div class="cell small-6 align-center-middle flex-container">
+        <div class="cell large-6 medium-6 small-12 align-center-middle flex-container">
             <a href="{{ route('register') }}" class="button bold margin-0">Get Started</a>
         </div>
     </div>
