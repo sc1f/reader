@@ -25,6 +25,15 @@ div.top-bar__title {
   width: 2em;
   padding: .25rem;
   font-weight: bold;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
+
+  &:hover {
+    background: darken($theme-primary, 10%);
+  }
 }
 
 .has-tip.has-tip--no-underline {

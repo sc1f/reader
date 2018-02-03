@@ -28,4 +28,5 @@ Route::group(['prefix'=>'/users/', 'middleware'=>'auth:api'], function () {
     Route::post('{user_id}/documents/', 'CourseController@createDocument');
     //individual gets
     Route::get('{user_id}/courses/{course_id}', 'CourseController@getCourseById');
+    // TODO: file upload API client
 });

@@ -9,7 +9,7 @@
             </div>
             <section v-if="$store.getters['courseSidebar/getCoursesLoaded']">
                 <div class="courses__container grid-y">
-                    <div class="cell course grid-y animated fadeIn" v-for="course in $store.getters['courseSidebar/getCourses']"
+                    <div class="cell course grid-y animated fadeIn animation-delay-25" v-for="course in $store.getters['courseSidebar/getCourses']"
                          @click="$store.dispatch('courseContent/getCourseById', course.id)">
                         <div class="grid-x">
                             <i class="fi-folder course__icon"></i>

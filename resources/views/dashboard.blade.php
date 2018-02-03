@@ -1,4 +1,5 @@
 @extends('layouts.base')
+@section('title', 'Dashboard')
 @section('top-bar-right')
     <div class="grid-x">
         <div class="cell flex-container align-right align-middle">
@@ -20,7 +21,7 @@
 @endsection
 @section('content')
     <!-- vue.js app entry point -->
-    <div id="app">
+    <div id="app" class="animated fadeIn animation-delay-15">
         <dashboard></dashboard>
     </div>
 @endsection

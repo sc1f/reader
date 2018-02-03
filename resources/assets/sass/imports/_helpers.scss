@@ -53,3 +53,24 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 .color-theme-primary {
   color: $theme-primary;
 }
+
+// animation
+
+$delays: (
+        500: 0.05,
+        750: 0.075,
+        10: 0.1,
+        15: 0.15,
+        25: 0.25,
+        33: 0.33,
+        50: 0.5,
+        60: 0.66,
+        75: 0.75,
+        1: 1);
+
+@each $key in map-keys($delays) {
+  $delay: map-get($delays, $key);
+  .animation-delay-#{$key} {
+    animation-delay: #{$delay}s !important;
+  }
+}

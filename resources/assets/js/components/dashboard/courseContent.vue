@@ -1,5 +1,5 @@
 <template>
-    <div class="course__content height-100 grid-y">
+    <div class="course__content height-100 grid-y animated fadeIn animation-delay-1">
         <h5 id="current-date" class="bold">It's <span class="color-theme-primary">{{ current_date.day_of_week }}</span>,
             {{ current_date.month }} {{ current_date.day }}.</h5>
         <p v-if="!$store.getters['courseContent/getCurrentCourseLoaded']">Select a course from the sidebar to begin.</p>

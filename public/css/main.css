@@ -31,6 +31,12 @@ div.top-bar__title {
   width: 2em;
   padding: .25rem;
   font-weight: bold;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+div.top-bar__title:hover {
+  background: #ee4926;
 }
 
 .has-tip.has-tip--no-underline {
@@ -188,6 +194,56 @@ ul.menu {
 
 .color-theme-primary {
   color: #F27155;
+}
+
+.animation-delay-500 {
+  -webkit-animation-delay: 0.05s !important;
+          animation-delay: 0.05s !important;
+}
+
+.animation-delay-750 {
+  -webkit-animation-delay: 0.075s !important;
+          animation-delay: 0.075s !important;
+}
+
+.animation-delay-10 {
+  -webkit-animation-delay: 0.1s !important;
+          animation-delay: 0.1s !important;
+}
+
+.animation-delay-15 {
+  -webkit-animation-delay: 0.15s !important;
+          animation-delay: 0.15s !important;
+}
+
+.animation-delay-25 {
+  -webkit-animation-delay: 0.25s !important;
+          animation-delay: 0.25s !important;
+}
+
+.animation-delay-33 {
+  -webkit-animation-delay: 0.33s !important;
+          animation-delay: 0.33s !important;
+}
+
+.animation-delay-50 {
+  -webkit-animation-delay: 0.5s !important;
+          animation-delay: 0.5s !important;
+}
+
+.animation-delay-60 {
+  -webkit-animation-delay: 0.66s !important;
+          animation-delay: 0.66s !important;
+}
+
+.animation-delay-75 {
+  -webkit-animation-delay: 0.75s !important;
+          animation-delay: 0.75s !important;
+}
+
+.animation-delay-1 {
+  -webkit-animation-delay: 1s !important;
+          animation-delay: 1s !important;
 }
 
 .main {

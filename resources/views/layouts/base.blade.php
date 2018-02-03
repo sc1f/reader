@@ -17,7 +17,7 @@
 <div class="top-bar">
     <div class="top-bar-left">
         <a href="/">
-            <div class="top-bar__title flex-container align-center-middle">rdr</div>
+            <div class="top-bar__title flex-container align-center-middle animated fadeIn">rdr</div>
         </a>
     </div>
     <div class="top-bar-right">
