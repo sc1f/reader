@@ -18,12 +18,12 @@ class CourseController extends Controller
         $this->middleware('auth');
     }
 
-    public function getCourses(Request $request, $user_id) {
-        if(!Auth::check() || Auth::id() != $user_id) {
+    public function getCourses(Request $request) {
+        if(!Auth::check()) {
             abort(401, 'unauthorized');
         }
 
-        $user = User::findOrFail($user_id);
+        $user = User::findOrFail(Auth::id());
         $courses = $user->courses;
 
         $data = [
@@ -37,16 +37,15 @@ class CourseController extends Controller
     /**
      * Given a course_id, finds the associated Course object and returns it in JSON.
      * @param Request $request
-     * @param $user_id
      * @param $course_id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function getCourseById(Request $request, $user_id, $course_id) {
-        if(!Auth::check() || Auth::id() != $user_id) {
+    public function getCourseById(Request $request, $course_id) {
+        if(!Auth::check()) {
             abort(401, 'unauthorized');
         }
 
-        $user = User::findOrFail($user_id);
+        $user = User::findOrFail(Auth::id());
         $course = $user->courses->where('id', '=', $course_id)->first();
 
         if($course == null) {
@@ -60,12 +59,12 @@ class CourseController extends Controller
         return \Response::json($data);
     }
 
-    public function createCourse(Request $request, $user_id) {
-        if(!Auth::check() || Auth::id() != $user_id) {
+    public function createCourse(Request $request) {
+        if(!Auth::check()) {
             abort(401, 'unauthorized');
         }
 
-        $user = User::findOrFail($user_id);
+        $user = User::findOrFail(Auth::id());
         $new_course = new Course([
             'name' => $request->input('name'),
             'department' => $request->input('department'),

@@ -14,6 +14,21 @@ $sides: (top, bottom, left, right); // Leave this variable alone
   }
 }
 
+$margins: (
+        50: .5em,
+        75: .75em,
+        auto: auto
+);
+
+@each $key in map-keys($margins) {
+  $margin: map-get($margins, $key);
+  @each $side in $sides {
+    .margin-#{$side}-#{$key} {
+      margin-#{$side}: #{$margin} !important;
+    }
+  }
+}
+
 .margin-0 {
   margin: 0 !important;
 }

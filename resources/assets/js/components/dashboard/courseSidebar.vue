@@ -1,8 +1,13 @@
 <template>
     <div class="courses__sidebar">
         <div>
-            <div class="grid-x align-middle courses__header">
-                <h5>Your Courses</h5>
+            <div class="grid-x flex-container align-middle courses__header margin-bottom-1">
+                <h5 class="bold margin-bottom-0 margin-right-50">Your Courses</h5>
+                <div class="cell auto">
+                    <button id="new-deadline-form__activator" class="course__form--button course__form--button--small flex-container align-center-middle">
+                        <i class="fi-plus"></i>
+                    </button>
+                </div>
             </div>
             <div class="courses__container courses__container--none cell auto" v-if="!$store.getters['courseSidebar/getCoursesLoaded'] && !$store.getters['courseSidebar/getCourses']">
                 <p>You have no courses to track.</p>
@@ -13,17 +18,12 @@
                          @click="$store.dispatch('courseContent/getCourseById', course.id)">
                         <div class="grid-x">
                             <i class="fi-folder course__icon"></i>
-                            <span class="course__text course__text--name">{{ course.name }}</span>
+                            <span class="course__text course__text--name">{{ truncate(course.name, 12, "...") }}</span>
                         </div>
-                        <span class="course__text course__text--meta">{{ course.department }} {{ course.course_code}}</span>
-                        <span class="course__text course__text--meta">{{ course.instructor }}, {{ course.time }}</span>
-                        <!-- TODO: course room? -->
+                        <span class="course__text course__text--meta"><i class="fi-info course__icon"></i> {{ course.department }} {{ course.course_code}}</span>
+                        <span class="course__text course__text--meta"><i class="fi-clock course__icon"></i> {{ course.time }}</span>
+                        <!-- TODO: cocurse room? -->
                     </div>
-                </div>
-                <div class="cell animated fadeIn">
-                    <button id="new-course-form__activator" class="course__form--new_course">
-                        <i class="fi-plus"></i><span>New Course</span>
-                    </button>
                 </div>
             </section>
         </div>
@@ -49,5 +49,10 @@
                     //console.error(error);
                 });
         },
+        methods: {
+            truncate: function (text, stop, clamp) {
+                return text.slice(0, stop) + (stop < text.length ? clamp || '...' : '')
+            }
+        }
     }
 </script>

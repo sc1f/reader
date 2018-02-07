@@ -44,8 +44,7 @@ const courseSidebar = {
     actions: {
         getCoursesByUser({ commit, state, rootState }) {
             return new Promise((resolve, reject) => {
-                let user_id = rootState.dashboard.user.id,
-                    url = '/api/users/' + user_id + '/courses/';
+                let url = '/api/user/courses/';
                 axios.get(url, {
                     // set headers
                 })
@@ -80,8 +79,7 @@ const courseContent = {
     actions: {
         getCourseById({ commit, state, rootState }, course_id) {
             return new Promise((resolve, reject) => {
-                let user_id = rootState.dashboard.user.id,
-                    url = '/api/users/' + user_id + '/courses/' + course_id;
+                let url = '/api/user/courses/' + course_id;
                 axios.get(url, {
                     // set headers
                 })
@@ -100,6 +98,30 @@ const courseContent = {
     }
 };
 
+const newCourseForm = {
+    namespaced: true,
+    state: {},
+    getters: {},
+    mutations: {},
+    actions: {}
+};
+
+const newDeadlineForm = {
+    namespaced: true,
+    state: {},
+    getters: {},
+    mutations: {},
+    actions: {}
+};
+
+const newDocumentForm = {
+    namespaced: true,
+    state: {},
+    getters: {},
+    mutations: {},
+    actions: {}
+};
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -110,6 +132,9 @@ Vue.component('dashboard', require('./components/Dashboard.vue'));
 Vue.component('course-sidebar', require('./components/dashboard/courseSidebar.vue'));
 Vue.component('course-content', require('./components/dashboard/courseContent.vue'));
 Vue.component('course-form', require('./components/dashboard/courseForm.vue'));
+Vue.component('course-deadlines', require('./components/dashboard/components/courseDeadlines.vue'));
+Vue.component('course-documents', require('./components/dashboard/components/courseDocuments.vue'));
+Vue.component('deadline', require('./components/dashboard/components/components/Deadline'));
 
 // Vue passport components
 Vue.component(
