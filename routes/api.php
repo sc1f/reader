@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix'=>'/user/', 'middleware'=>'auth:api'], function () {
     // get routes
-    Route::get('courses/', 'CourseController@getCourses');
+    Route::get('courses/', 'CourseController@getCourseList');
     Route::get('deadlines/', 'DeadlineController@getDeadlines');
     Route::get('documents/', 'DocumentController@getDocuments');
     // post new items

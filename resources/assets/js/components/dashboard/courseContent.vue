@@ -1,38 +1,28 @@
 <template>
     <div class="course__content height-100 grid-y animated fadeIn animation-delay-1">
-        <div v-if="!$store.getters['courseContent/getCurrentCourseLoaded']">
-            <h5 id="current-date" class="bold">It's <span class="color-theme-primary">{{ current_date.day_of_week }}</span>,
+        <course-content-header>
+            <h5 slot="title" v-if="$store.getters['courseContent/getCurrentCourse']" class="course-content__header bold">{{ $store.getters['courseContent/getCurrentCourse'].name }}</h5>
+            <h5 slot="title" v-else id="current-date" class="bold">It's <span class="color-theme-primary">{{ current_date.day_of_week }}</span>,
                 {{ current_date.month }} {{ current_date.day }}.</h5>
-            <p>Select a course from the sidebar to begin.</p>
-        </div>
-        <div class="cell height-100" v-else>
-            <!-- TODO: finish this out -->
-            <div class="content__container grid-y">
-                <div class="content__meta margin-bottom-1 grid-x align-middle">
-                    <div class="cell auto content__meta--left">
-                        <h1 id="content__meta--course-name" class="bold margin-0">{{ $store.getters['courseContent/getCurrentCourse'].name }}</h1>
-                    </div>
-                    <div class="grid-y align-right align-top margin-left-auto">
-                        <button class="course__form--button course__form--button--hollow course__form--button--right flex-container align-center-middle margin-bottom-50">
-                            <i class="fi-page-doc course__form--button--icon"></i><span>New Document</span>
-                        </button>
-                        <button class="course__form--button course__form--button--hollow course__form--button--right flex-container align-center-middle">
-                            <i class="fi-checkbox course__form--button--icon"></i><span>New To-Do</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="content__deadlines--container grid-y height-100">
-                    <div class="margin-bottom-1 grid-x">
-                        <div class="cell auto flex-container flex-dir-column content__deadlines content__deadlines--left margin-right-1">
-                            <course-deadlines></course-deadlines>
-                        </div>
-                       <!-- <div class="cell auto content__meta&#45;&#45;right flex-container flex-dir-column content__deadlines content__deadlines&#45;&#45;right">
-                            <course-documents></course-documents>
-                        </div>-->
-                    </div>
-                </div>
+            <div slot="actions" v-if="$store.getters['courseContent/getCurrentCourse']" class="grid-y flex-dir-row align-right align-middle">
+                <button class="course__form--button course__form--button--hollow course__form--button--right flex-container align-center-middle">
+                    <i class="fi-calendar course__form--button--icon"></i><span>New Deadline</span>
+                </button>
+                <button class="course__form--button course__form--button--hollow course__form--button--right flex-container align-center-middle margin-left-50">
+                    <i class="fi-page-doc course__form--button--icon"></i><span>New Document</span>
+                </button>
             </div>
-        </div>
+        </course-content-header>
+        <!-- overview -->
+        <course-content-container v-if="$store.getters['courseContent/getCurrentCourse']">
+            <deadlines slot="deadlines"></deadlines>
+            <documents slot="documents"></documents>
+        </course-content-container>
+        <!-- loaded course -->
+        <course-content-container v-else>
+            <deadlines slot="deadlines" :limit="3" all="true"></deadlines>
+            <documents slot="documents" :limit="3" :all="true"></documents>
+        </course-content-container>
     </div>
 </template>
 

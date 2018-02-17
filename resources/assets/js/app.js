@@ -34,23 +34,20 @@ const courseSidebar = {
         courses_loaded: false
     },
     getters: {
-        getCourses: (state) => state.courses,
-        getCoursesLoaded: (state) => state.courses_loaded
+        getCourseList: (state) => state.courses,
     },
     mutations: {
-        setCoursesLoaded: (state) => { state.courses_loaded = true },
-        setCourses: (state, courses) => { state.courses = courses }
+        setCourseList: (state, courses) => { state.courses = courses }
     },
     actions: {
-        getCoursesByUser({ commit, state, rootState }) {
+        getCourseListByUser({ commit, state, rootState }) {
             return new Promise((resolve, reject) => {
                 let url = '/api/user/courses/';
                 axios.get(url, {
                     // set headers
                 })
                     .then((response) => {
-                        commit('setCourses', response.data.courses);
-                        commit('setCoursesLoaded');
+                        commit('setCourseList', response.data.courses);
                         resolve();
                     })
                     .catch((err) => {
@@ -66,15 +63,12 @@ const courseContent = {
     namespaced: true,
     state: {
         current_course: null,
-        current_course_loaded: false
     },
     getters: {
         getCurrentCourse: (state) => state.current_course,
-        getCurrentCourseLoaded: (state) => state.current_course_loaded
     },
     mutations: {
         setCurrentCourse: (state, course) => { state.current_course = course },
-        setCurrentCourseLoaded: (state) => { state.current_course_loaded = true }
     },
     actions: {
         getCourseById({ commit, state, rootState }, course_id) {
@@ -85,7 +79,6 @@ const courseContent = {
                 })
                     .then((response) => {
                         commit('setCurrentCourse', response.data.course);
-                        commit('setCurrentCourseLoaded');
                         resolve();
                     })
                     .catch((err) => {
@@ -128,29 +121,47 @@ const newDocumentForm = {
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('dashboard', require('./components/Dashboard.vue'));
-Vue.component('course-sidebar', require('./components/dashboard/courseSidebar.vue'));
-Vue.component('course-content', require('./components/dashboard/courseContent.vue'));
-Vue.component('course-form', require('./components/dashboard/courseForm.vue'));
-Vue.component('course-deadlines', require('./components/dashboard/components/courseDeadlines.vue'));
-Vue.component('course-documents', require('./components/dashboard/components/courseDocuments.vue'));
-Vue.component('deadline', require('./components/dashboard/components/components/Deadline'));
+function loadCustomVueComponents() {
+    // common
+    Vue.component('modal', require('./components/common/BaseModal.vue'));
+    // dashboard
+    Vue.component('dashboard', require('./components/Dashboard.vue'));
+    Vue.component('course-sidebar', require('./components/dashboard/courseSidebar.vue'));
+    // course-content
+    Vue.component('course-content-header', require('./components/dashboard/courseContent/courseContentHeader.vue'));
+    Vue.component('course-content', require('./components/dashboard/courseContent.vue'));
+    Vue.component('course-content-container', require('./components/dashboard/courseContent/courseContentContainer.vue'));
+    //Vue.component('course-form', require('./components/dashboard/courseForm.vue'));
+    // course-deadlines
+    Vue.component('deadlines', require('./components/dashboard/components/courseDeadlines.vue'));
+    Vue.component('deadline', require('./components/dashboard/components/Deadline.vue'));
+    // TODO: Vue.component('deadline-form', require('./components/dashboard/courseForm.vue'));
+    // course-documents
+    Vue.component('documents', require('./components/dashboard/components/courseDocuments.vue'));
+    // TODO: Vue.component('document-form', require('./components/dashboard/courseForm.vue'));
 
-// Vue passport components
-Vue.component(
-    'passport-clients',
-    require('./components/passport/Clients.vue')
-);
+}
 
-Vue.component(
-    'passport-authorized-clients',
-    require('./components/passport/AuthorizedClients.vue')
-);
+function loadPassportVueComponents() {
+    Vue.component(
+        'passport-clients',
+        require('./components/passport/Clients.vue')
+    );
 
-Vue.component(
-    'passport-personal-access-tokens',
-    require('./components/passport/PersonalAccessTokens.vue')
-);
+    Vue.component(
+        'passport-authorized-clients',
+        require('./components/passport/AuthorizedClients.vue')
+    );
+
+    Vue.component(
+        'passport-personal-access-tokens',
+        require('./components/passport/PersonalAccessTokens.vue')
+    );
+}
+
+// run page setup
+loadCustomVueComponents();
+loadPassportVueComponents();
 
 export const store = new window.Vuex.Store({
     modules: {

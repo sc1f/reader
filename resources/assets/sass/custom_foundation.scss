@@ -31,3 +31,8 @@
 @import 'foundation_sass/foundation';
 
 @include foundation-everything;
+
+// override
+.button.primary,.button.primary:hover {
+  color: #fff;
+}

@@ -8580,3 +8580,8 @@ a.thumbnail image {
   }
 }
 
+.button.primary,
+.button.primary:hover {
+  color: #fff;
+}
+

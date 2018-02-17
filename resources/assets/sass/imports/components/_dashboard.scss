@@ -50,8 +50,8 @@ i.course__icon {
 }
 
 .course__form--button {
-  background: $theme-primary;
-  color: #fff;
+  border: none;
+  margin: 0;
   padding: .5em;
   -webkit-transition: all .4s;
   -moz-transition: all .4s;
@@ -97,22 +97,18 @@ i.course__icon {
 }
 
 .content__container {
+  width: 100%;
 }
 
-.content__meta, .content__deadlines {
-  //border: 1px solid $theme-lightgray;
-  //padding: 1em;
+.course-content__header {
+  color: $theme-primary;
 }
 
-.content__meta--right {
+.course-content__right {
   align-content: flex-end;
 }
 
-#content__meta--course-name {
-  color: $theme-primary;
-  font-style: italic;
-}
 
 #current-date {
-  padding-bottom: .5em;
+  margin: 0;
 }

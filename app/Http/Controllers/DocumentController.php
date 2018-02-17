@@ -15,12 +15,16 @@ class DocumentController extends Controller
         $this->middleware('auth');
     }
 
-    public function getDocuments(Request $request) {
+    public function getDocumentList(Request $request) {
         // return 200 with JSON or HTTP error
     }
 
-    public function createDocument(Request $request) {
+    public function getDocumentById(Request $request, $document_id) {
 
+
+    }
+
+    public function createDocument(Request $request) {
         // return 200 or HTTP error
         $s3 = Storage::disk('s3');
         if(Input::hasFile('document')) {

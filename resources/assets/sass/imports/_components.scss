@@ -1,5 +1,7 @@
 // homepage
 
+// TODO please refactor SCSS file names
+
 .main {
   padding: 1em;
   min-height: 80vh;
@@ -23,3 +25,39 @@ div.grid-x.index {
   height: 100%;
 }
 
+// modal
+.modal__mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  transition: opacity .3s ease;
+}
+
+.modal__container {
+  background: #fff;
+  border: 1px solid $theme-lightgray;
+  max-height: 80%;
+  max-width: 75%;
+  min-width: 30%;
+  padding: 1em;
+  overflow: scroll;
+}
+
+// modal transitions
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

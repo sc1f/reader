@@ -7,7 +7,7 @@
             </div>
             <div class="cell small-12">
                 <ul>
-                    <li>Read <a href="#">The Wealth of Nations</a></li>
+                    <li>Read <a href="#">This and that!</a></li>
                 </ul>
             </div>
         </div>

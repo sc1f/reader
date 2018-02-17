@@ -18,7 +18,7 @@ class CourseController extends Controller
         $this->middleware('auth');
     }
 
-    public function getCourses(Request $request) {
+    public function getCourseList() {
         if(!Auth::check()) {
             abort(401, 'unauthorized');
         }
