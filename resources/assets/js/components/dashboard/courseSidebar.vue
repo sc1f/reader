@@ -22,11 +22,12 @@
                         </div>
                         <span class="course__text course__text--meta"><i class="fi-info course__icon"></i> {{ course.department }} {{ course.course_code}}</span>
                         <span class="course__text course__text--meta"><i class="fi-clock course__icon"></i> {{ course.time }}</span>
-                        <!-- TODO: course room? -->
                     </div>
                 </div>
             </section>
+            <a v-if="$store.getters['courseContent/getCurrentCourseLoaded']" @click.stop="$store.dispatch('courseContent/hideCourse')">Return to overview</a>
             <modal :show="show_new_course_modal" @close="show_new_course_modal = false">
+                <!-- TODO: finish this -->
                 <h4 class="bold">Create a new course</h4>
                 <form method="POST">
                     <label for="course_name">Course Name</label>

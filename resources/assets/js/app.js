@@ -63,14 +63,20 @@ const courseContent = {
     namespaced: true,
     state: {
         current_course: null,
+        current_course_loaded: false
     },
     getters: {
         getCurrentCourse: (state) => state.current_course,
+        getCurrentCourseLoaded: (state) => state.current_course_loaded
     },
     mutations: {
         setCurrentCourse: (state, course) => { state.current_course = course },
+        setCurrentCourseLoaded: (state, loaded) => { state.current_course_loaded = loaded },
     },
     actions: {
+        hideCourse({ commit, state }) {
+            commit('setCurrentCourseLoaded', false);
+        },
         getCourseById({ commit, state, rootState }, course_id) {
             return new Promise((resolve, reject) => {
                 let url = '/api/user/courses/' + course_id;
@@ -79,6 +85,7 @@ const courseContent = {
                 })
                     .then((response) => {
                         commit('setCurrentCourse', response.data.course);
+                        commit('setCurrentCourseLoaded', true);
                         resolve();
                     })
                     .catch((err) => {

@@ -1,10 +1,10 @@
 <template>
     <div class="course__content height-100 grid-y animated fadeIn animation-delay-1">
         <course-content-header>
-            <h5 slot="title" v-if="$store.getters['courseContent/getCurrentCourse']" class="course-content__header bold">{{ $store.getters['courseContent/getCurrentCourse'].name }}</h5>
+            <h5 slot="title" v-if="$store.getters['courseContent/getCurrentCourseLoaded']" class="course-content__header bold">{{ $store.getters['courseContent/getCurrentCourse'].name }}</h5>
             <h5 slot="title" v-else id="current-date" class="bold">It's <span class="color-theme-primary">{{ current_date.day_of_week }}</span>,
                 {{ current_date.month }} {{ current_date.day }}.</h5>
-            <div slot="actions" v-if="$store.getters['courseContent/getCurrentCourse']" class="grid-y flex-dir-row align-right align-middle">
+            <div slot="actions" v-if="$store.getters['courseContent/getCurrentCourseLoaded']" class="grid-y flex-dir-row align-right align-middle">
                 <button class="course__form--button course__form--button--hollow course__form--button--right flex-container align-center-middle">
                     <i class="fi-calendar course__form--button--icon"></i><span>New Deadline</span>
                 </button>
@@ -14,7 +14,7 @@
             </div>
         </course-content-header>
         <!-- overview -->
-        <course-content-container v-if="$store.getters['courseContent/getCurrentCourse']">
+        <course-content-container v-if="$store.getters['courseContent/getCurrentCourseLoaded']">
             <deadlines slot="deadlines"></deadlines>
             <documents slot="documents"></documents>
         </course-content-container>
